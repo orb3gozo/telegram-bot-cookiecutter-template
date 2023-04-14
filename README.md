@@ -21,7 +21,7 @@ python3 -m pip install --user cookiecutter
 Create the project:
 
 ```bash
-cookiecutter https://github.com/clarriu97/python-template
+cookiecutter https://github.com/i97orbegozo/telegram-bot-template
 ```
 
 Fill all the details and your project should be ready in a matter of seconds!
