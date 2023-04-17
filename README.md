@@ -1,6 +1,8 @@
-# Cookiecutter Python Telegram Bot
+#  Python Telegram Bot Cookiecutter Template
 
-A [cookiecutter](https://github.com/audreyr/cookiecutter) template for Python Telegram Bot (ready for CI/CD pipelines) based on [python-template](https://github.com/clarriu97/python-template) and [virus/total-telegram-bot](https://github.com/clarriu97/virus-total-telegram-bot), repos of my college [clarriu97](https://github.com/clarriu97).
+![image](./docs/assets/telegram-bot-cookiecutter-template.jpg)
+
+A [cookiecutter](https://github.com/audreyr/cookiecutter) template for Python Telegram Bot based on [python-template](https://github.com/clarriu97/python-template) and [virus/total-telegram-bot](https://github.com/clarriu97/virus-total-telegram-bot), repos of my college [clarriu97](https://github.com/clarriu97).
 
 ## Features
 
@@ -41,10 +43,37 @@ The template provides sensible defaults for all the configuration options, howev
 * `version`: The initial version ([Semantic Versioning](https://semver.org/)). It's recommended you use the default value (`0.1.0`).
 * `python_versions`: The supported python versions. If possible, prefer supporting only the latest version available.
 
+## Beginner guide
+
+Once you have created the project from the template, let's see how we can launch it to start developing. First let's create a virtual environment using tox:
+
+```bash
+$ make env-compile
+$ make env-create
+```
+
+This will create a virtual environment with all the needed dependencies (using [tox](https://tox.readthedocs.io/en/latest/)). You can activate this environment with:
+
+```bash
+$ source ./.tox/{{cookiecutter.project_slug}}/bin/activate
+```
+
+Then, you can run `make help` to learn more about the different tasks you can perform on this project using [make](https://www.gnu.org/software/make/).
+
+But back to what we are interested in, to run the bot, you must follow the following steps:
+
+1. Create a bot using father bot and getting its apikey. [Here](https://core.telegram.org/bots#how-do-i-create-a-bot) you will find more information.
+1. Add the Telegram bot API key to your `.bashrc` / `.zshrc` ...
+    ```bash
+    export BOT_APIKEY='your-API-key-here'
+    ```
+3. Run the bot
+    ```bash
+    make run
+    ```
+And that's it! Your bot is running an ready to start a conversation. Try to send `/start` or `/help` commands in your telegram bot and you should get a response message!
+
+
 ## Contributing
 
 You can freely contribute to this template by submitting a merge request with the intended changes. Before you do, please take a look at the [CONTRIBUTING](./CONTRIBUTING.md) guidelines.
-
-## Request a Feature / Fork This / Create Your Own
-
-If you have differences in your preferred setup, you are encouraged to fork this or create your own template. But before you do, please contact the maintainers of this repo to see if the missing feature can be added (or do it yourself!). The recommended way is to create an issue detailing what the feature is and the value it would bring.

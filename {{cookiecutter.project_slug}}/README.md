@@ -18,7 +18,7 @@ $ docker run -it registry.gitlab.com/{{ cookiecutter.project_url.lstrip("https:/
 
 ## Development
 
-To start developing this project, clone this repo and do:
+To run the bot locally, clone this repo and follow the instructions:
 
 ```bash
 $ make env-compile
@@ -31,11 +31,11 @@ This will create a virtual environment with all the needed dependencies (using [
 $ source ./.tox/{{cookiecutter.project_slug}}/bin/activate
 ```
 
-Then, you can run `make help` to learn more about the different tasks you can perform on this project using [make](https://www.gnu.org/software/make/).
+Then, you can run `make help` to learn more about the different tasks you can perform on the project using [make](https://www.gnu.org/software/make/).
 
-In order to run the bot, follow these steps:
+But back to what we are interested in, to run the bot, you must follow the following steps:
 
-1. Create a bot using father bot. [Here](https://core.telegram.org/bots#how-do-i-create-a-bot) you will find more information.
+1. Create a bot using father bot and getting its apikey. [Here](https://core.telegram.org/bots#how-do-i-create-a-bot) you will find more information.
 1. Add the Telegram bot API key to your `.bashrc` / `.zshrc` ...
     ```bash
     export BOT_APIKEY='your-API-key-here'
@@ -44,7 +44,7 @@ In order to run the bot, follow these steps:
     ```bash
     make run
     ```
-And that's it! Your bot is running an ready to start a conversation.
+And that's it! Your bot is running an ready to start a conversation. Try to send `/start` or `/help` commands in your telegram bot and you should get a response message!
 
 ## License
 

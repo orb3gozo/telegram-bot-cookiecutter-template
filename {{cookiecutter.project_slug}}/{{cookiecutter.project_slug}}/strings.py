@@ -7,8 +7,8 @@ SPANISH = 'es'
 dialogs = {
     "help": {
         ENGLISH:
-            "Welcome to my bot",
+            "Well done mate! Now you can start developing 👨‍💻🚀",
         SPANISH:
-            "Bienvenido a mi bot",
+            "¡Bien hecho amigo! Ahora ya puedes empezar a desarrollar 👨‍💻🚀",
     }
 }
