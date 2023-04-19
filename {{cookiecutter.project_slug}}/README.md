@@ -8,14 +8,6 @@
 
 </div>
 
-## Usage
-
-This application is released as a Docker image. You can run it with:
-
-```bash
-$ docker run -it registry.gitlab.com/{{ cookiecutter.project_url.lstrip("https://gitlab.com/") }}:{{ cookiecutter.version }}
-```
-
 ## Development
 
 To run the bot locally, clone this repo and follow the instructions:
